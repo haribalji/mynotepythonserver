@@ -6,7 +6,7 @@ pydantic
 # --- RAG and NLP ---
 chromadb
 
-sentence-transformers==2.7.0
+sentence-transformers
 
 langchain-text-splitters
 pypdf
@@ -21,7 +21,7 @@ python-dotenv
 
 
 transformers
-torch==2.5.1
+torch
 
 
 python-multipart

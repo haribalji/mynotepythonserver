@@ -6,7 +6,7 @@ pydantic
 # --- RAG and NLP ---
 chromadb
 
-#sentence-transformers
+sentence-transformers
 
 langchain-text-splitters
 pypdf

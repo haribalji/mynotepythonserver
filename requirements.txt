@@ -21,4 +21,4 @@ python-dotenv
 
 
 transformers
-torch==2.2.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+torch==2.5.1

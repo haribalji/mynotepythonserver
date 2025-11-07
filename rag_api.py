@@ -110,23 +110,27 @@ app = FastAPI(title="RAG API", description="Ask questions from uploaded PDFs", v
 
 
 
-origins = [
-    "https://mynotefrontendserver.vercel.app",
-    "https://mynotepythonserver.onrender.com/upload_pdf",
-    "https://mynotepythonserver.onrender.com",
-    "https://mynotefrontendserver-sd23.vercel.app",  # ✅ your Vercel frontend
-    "http://localhost:3000",  # ✅ for local development
-]
+# origins = [
+#     "https://mynotefrontendserver.vercel.app",
+#     "https://mynotepythonserver.onrender.com/upload_pdf",
+#     "https://mynotepythonserver.onrender.com",
+#     "https://mynotefrontendserver-sd23.vercel.app",  # ✅ your Vercel frontend
+#     "http://localhost:3000",  # ✅ for local development
+# ]
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=origins,
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
 
+from flask import Flask
+from flask_cors import CORS
 
+app = Flask(__name__)
+CORS(app)  # allow all origins
 
 
 

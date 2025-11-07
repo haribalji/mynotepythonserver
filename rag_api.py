@@ -91,6 +91,8 @@
 
 from fastapi import FastAPI, UploadFile, Form
 from fastapi.middleware.cors import CORSMiddleware
+# from fastapi.middleware.cors import CORSMiddleware
+
 import shutil, os,time
 from pydantic import BaseModel
 
@@ -106,18 +108,20 @@ app = FastAPI(title="RAG API", description="Ask questions from uploaded PDFs", v
 #     allow_headers=["*"],
 # )
 
+
+
+origins = [
+    "https://mynotefrontendserver-sd23.vercel.app",  # ✅ your Vercel frontend
+    "http://localhost:3000",  # ✅ for local development
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://mynotefrontendserver-sd23.vercel.app",  # ✅ Your final frontend URL
-        "http://localhost:3000",  # ✅ For local React testing
-    ],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-
 
 
 

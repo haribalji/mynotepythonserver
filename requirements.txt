@@ -4,5 +4,5 @@ flask-cors==3.1.0
 easyocr==1.7
 Pillow==10.0.0
 numpy==1.27.0
-google-generativeai==0.1.0  # adjust if the actual package name/version differs
+google-generativeai # adjust if the actual package name/version differs
 python-dotenv==1.0.0

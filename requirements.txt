@@ -1,8 +1,8 @@
 
-Flask==2.3.4
-flask-cors==3.1.0
-easyocr==1.7
-Pillow==10.0.0
-numpy==1.27.0
+Flask
+flask-cors
+easyocr
+Pillow
+numpy
 google-generativeai # adjust if the actual package name/version differs
-python-dotenv==1.0.0
+python-dotenv

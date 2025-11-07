@@ -98,13 +98,30 @@ from rag_core import setup_rag_pipeline, ask_question
 
 app = FastAPI(title="RAG API", description="Ask questions from uploaded PDFs", version="1.0")
 
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["https://mynoteserver.onrender.com"],
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://mynoteserver.onrender.com"],
+    allow_origins=[
+        "https://mynotefrontendserver-sd23.vercel.app",  # ✅ Your final frontend URL
+        "http://localhost:3000",  # ✅ For local React testing
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+
+
+
+
 
 PDF_PATH = "uploaded.pdf"
 collection = None

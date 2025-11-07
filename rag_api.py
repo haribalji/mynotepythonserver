@@ -111,6 +111,7 @@ app = FastAPI(title="RAG API", description="Ask questions from uploaded PDFs", v
 
 
 origins = [
+    "https://mynotefrontendserver.vercel.app",
     "https://mynotefrontendserver-sd23.vercel.app",  # ✅ your Vercel frontend
     "http://localhost:3000",  # ✅ for local development
 ]

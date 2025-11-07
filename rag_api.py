@@ -118,19 +118,13 @@ app = FastAPI(title="RAG API", description="Ask questions from uploaded PDFs", v
 #     "http://localhost:3000",  # ✅ for local development
 # ]
 
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=origins,
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
-
-from flask import Flask
-from flask_cors import CORS
-
-app = Flask(__name__)
-CORS(app)  # allow all origins
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 

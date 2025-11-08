@@ -144,7 +144,7 @@ class QuestionRequest(BaseModel):
 
 
 
-@app.post("/uploadpdf/")
+@app.post("/upload_pdf/")
 async def upload_pdf(file: UploadFile):
     """Upload and process a PDF."""
     global collection, embedding_model
@@ -264,7 +264,7 @@ async def upload_pdf(file: UploadFile):
 
 
 # Define the /ask_question/ endpoint
-@app.post("/askquestion/")
+@app.post("/ask_question/")
 async def ask_question_api(request: QuestionRequest):
     question = request.query
     global collection, embedding_model
